@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="helloBean" class="com.my.app.HelloWorld">
+        <property name="name" value="mykong"/>
+    </bean>
+
+    <bean id="MovieLister" class="com.my.app.MovieLister">
+        <property name="finder" ref="MovieFinder"/>
+    </bean>
+
+    <bean id="MovieFinder" class="com.my.app.MovieFinderImpl"/>
+</beans>
