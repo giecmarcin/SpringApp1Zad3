@@ -10,4 +10,8 @@ public class MovieLister {
     public void setFinder(MovieFinder finder) {
         this.finder = finder;
     }
+
+    public void showAllMovies(){
+        finder.findAll();
+    }
 }

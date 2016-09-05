@@ -14,9 +14,12 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
         HelloWorld helloObj = (HelloWorld)context.getBean("helloBean");
 
-        MovieFinder finderObj = (MovieFinder)context.getBean("MovieFinder");
+       // MovieFinder finderObj = (MovieFinder)context.getBean("MovieFinder");
 
         helloObj.printHello();
-        finderObj.findAll();
+        //finderObj.findAll();
+
+        MovieLister movieLister = (MovieLister)context.getBean("MovieLister");
+        movieLister.showAllMovies();
     }
 }
