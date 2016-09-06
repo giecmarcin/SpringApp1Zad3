@@ -1,9 +1,9 @@
 package com.my.app;
 
 /**
- * Created by mgiec on 9/5/2016.
+ * Created by mgiec on 9/6/2016.
  */
-public class HelloWorld {
+public class ClassB {
     private String name;
 
     public void setName(String name) {
@@ -14,4 +14,3 @@ public class HelloWorld {
         System.out.println(name);
     }
 }
-

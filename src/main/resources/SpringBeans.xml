@@ -2,8 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="helloBean" class="com.my.app.HelloWorld">
-        <property name="name" value="mykong"/>
+
+    <bean id="helloBean" class="com.my.app.HelloWorld" scope="prototype">
+        <!--<property name="name" value="mykong"/>-->
     </bean>
 
     <bean id="MovieLister" class="com.my.app.MovieLister">
@@ -11,4 +12,13 @@
     </bean>
 
     <bean id="MovieFinder" class="com.my.app.MovieFinderImpl"/>
+
+    <bean id="ClassB" class="com.my.app.ClassB" scope="prototype">
+
+    </bean>
+
+    <bean id="ClassA" class="com.my.app.ClassA" scope="prototype">
+        <property name="pole" ref="ClassB"/>
+    </bean>
+
 </beans>
